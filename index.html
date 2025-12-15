@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siva | Portfolio</title>
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -42,7 +42,7 @@
     /* ----------------------- NAVBAR ----------------------- */
     nav {
       width: 100%;
-      height: 80px;
+      height: 80px; /* 🔹 ADDED: explicit navbar height */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -72,7 +72,6 @@
       font-size: 0.95rem;
       position: relative;
       padding-bottom: 4px;
-      transition: 0.3s;
     }
 
     .nav-links a::after {
@@ -90,7 +89,7 @@
       width: 100%;
     }
 
-    /* ----------------------- HERO SECTION ----------------------- */
+    /* ----------------------- HERO ----------------------- */
     .hero {
       width: 100%;
       max-width: 1100px;
@@ -101,7 +100,6 @@
     .hero h1 {
       font-size: 2.8rem;
       font-weight: 700;
-      color: #ffffff;
       margin-bottom: 0.8rem;
     }
 
@@ -121,12 +119,6 @@
       color: #fff;
       font-size: 1rem;
       cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    .hero button:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
     }
 
     /* ----------------------- CARD ----------------------- */
@@ -135,35 +127,12 @@
       border-radius: 20px;
       padding: 2rem;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-      transition: all 0.4s ease;
       border: 1px solid rgba(255, 255, 255, 0.05);
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-      border-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .card h2 {
-      font-size: 1.3rem;
-      margin-bottom: 0.8rem;
-      color: #8c8c8c;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: #bbb;
-      line-height: 1.6;
     }
 
     /* ----------------------- ABOUT ----------------------- */
     #about {
       margin-top: 4rem;
-      text-align: left;
       width: 90%;
       max-width: 1100px;
     }
@@ -188,19 +157,6 @@
       padding: 1.5rem;
       text-align: center;
       border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: 0.4s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      border-color: #696969;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .project-card h3 {
-      color: #ffffff;
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
     }
 
     .git-box {
@@ -209,13 +165,7 @@
       border: 1px solid #ffffff;
       border-radius: 8px;
       color: #b6b6b6;
-      transition: 0.3s;
       font-size: 0.9rem;
-    }
-
-    .git-box:hover {
-      background-color: #686868;
-      color: #0e0e10;
     }
 
     /* ----------------------- CONTACT ----------------------- */
@@ -229,22 +179,20 @@
     .socials {
       display: flex;
       justify-content: center;
-      align-items: center;
       gap: 2rem;
       margin-top: 1.5rem;
-      position: relative;
-      z-index: 10;
     }
 
     .socials a {
       font-size: 1.6rem;
       color: #bbb;
-      transition: 0.3s ease;
     }
 
-    .socials a:hover {
-      color: #bbbbbb;
-      transform: scale(1.2);
+    /* ====================== 🔥 MAIN FIX 🔥 ====================== */
+    #about,
+    #projects,
+    #contact {
+      scroll-margin-top: 100px; /* 🔹 ADDED: fixes anchor offset */
     }
 
     /* ----------------------- FOOTER ----------------------- */
@@ -255,28 +203,12 @@
       font-size: 0.85rem;
       color: #777;
     }
-
-    /* ----------------------- RESPONSIVE ----------------------- */
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem 2rem;
-      }
-
-      .nav-links {
-        margin-top: 0.8rem;
-        gap: 1.2rem;
-      }
-
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-    }
   </style>
 </head>
+
 <body>
-  <!-- ======================= NAVBAR ======================= -->
+
+  <!-- NAVBAR -->
   <nav>
     <div class="logo">forex-911</div>
     <div class="nav-links">
@@ -286,63 +218,52 @@
     </div>
   </nav>
 
-  <!-- ======================= HERO ======================= -->
+  <!-- HERO -->
   <section class="hero">
     <h1>Hi, I'm forex911</h1>
     <p>
       A developer passionate about building impactful digital experiences.<br />
-      I combine design, code, and creativity to craft elegant and functional solutions.
+      I combine design, code, and creativity to craft elegant solutions.
     </p>
     <a href="#projects"><button>View My Work</button></a>
   </section>
 
-  <!-- ======================= ABOUT ======================= -->
+  <!-- ABOUT -->
   <section id="about" class="card">
     <h2>About Me</h2>
     <p>
       I specialize in full-stack web development, UI/UX design, and automation.
-      With a strong background in AI-driven applications and cloud technologies, I aim to create
-      efficient systems that blend usability with innovation.
-    </p>
-    <br />
-    <p>
-      <strong>Skills:</strong> HTML, CSS, JavaScript, Python, React, Node.js, MongoDB, Machine Learning<br />
-      <strong>Strengths:</strong> Problem-solving, Clean Design Thinking, Performance Optimization<br />
-      <strong>Currently Working On:</strong> AI-powered productivity tools and interactive front-end experiences
     </p>
   </section>
 
-  <!-- ======================= PROJECTS ======================= -->
+  <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-      <h3>YouTube-Instagram-Spotify Downloader</h3>
-      <a class="git-box" href="https://github.com/forex-911/yt-insta-spotify-downloader" target="_blank">
-         View on GitHub
-      </a>
+        <h3>YouTube-Instagram-Spotify Downloader</h3>
+        <a class="git-box" href="https://github.com/forex-911/yt-insta-spotify-downloader" target="_blank">
+          View on GitHub
+        </a>
       </div>
-
-<!-- ========================PROJECTS CAN BE ADDED HERE========================== -->
-      
     </div>
   </section>
 
-  <!-- ======================= CONTACT ======================= -->
+  <!-- CONTACT -->
   <section id="contact" class="card">
     <h2>Contact</h2>
-    <p>Let's connect or collaborate. Find me on these platforms:</p>
-
+    <p>Let's connect or collaborate</p>
     <div class="socials">
       <a href="https://www.instagram.com/its_siva._?igsh=MXRybGxvZHEwY3Jicg==" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.linkedin.com/in/sivasubramaniyan-c-325397371/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/forex-911" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
+</div>
   </section>
 
-  <!-- ======================= FOOTER ======================= -->
-  <footer>
-    -WITH LOVE-
-  </footer>
+  <footer>-WITH LOVE-</footer>
+
 </body>
 </html>
+
+
+
