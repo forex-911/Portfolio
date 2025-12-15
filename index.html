@@ -195,6 +195,64 @@
       scroll-margin-top: 100px; /* 🔹 ADDED: fixes anchor offset */
     }
 
+    /* ================= ABOUT SECTION ================= */
+.about-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 5rem auto;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+}
+
+/* Cards */
+.about-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  backdrop-filter: blur(16px);
+  border-radius: 18px;
+  padding: 1.8rem;
+  color: #eaeaea;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Bigger left card */
+.about-card.large {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about-card p {
+  color: #d0d0d0;
+  margin-bottom: 1rem;
+}
+
+.about-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: #ffffff;
+}
+
+/* Right column */
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+}
+
     /* ----------------------- FOOTER ----------------------- */
     footer {
       margin-top: 4rem;
@@ -229,32 +287,65 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="card">
-  <h2>About Me</h2>
-  <p>
-    I am a passionate full-stack web developer focused on building modern, scalable,
-    and user-centric digital experiences. I enjoy turning complex problems into
-    clean, efficient, and visually appealing solutions.
-  </p>
+  <section id="about" class="about-section">
+  <div class="about-container">
 
-  <p>
-    With a strong foundation in front-end and back-end technologies, I work across
-    the entire development lifecycle — from UI/UX design and performance optimization
-    to server-side logic and database integration. I have a growing interest in
-    AI-powered applications and automation that enhance productivity and usability.
-  </p>
+    <!-- LEFT: ABOUT TEXT -->
+    <div class="about-card large">
+      <p>
+        I’m a 3rd year B.Tech student specializing in
+        <strong>Artificial Intelligence and Data Science</strong> at
+        Dr. NGP Institute of Technology, Coimbatore.
+      </p>
 
-  <p>
-    <strong>Skills:</strong>
-    HTML, CSS, JavaScript, Python, React, Node.js, MongoDB, Machine Learning
-    <br />
-    <strong>Strengths:</strong>
-    Problem-Solving, Clean Code, Design Thinking, Performance Optimization
-    <br />
-    <strong>Currently Working On:</strong>
-    AI-driven productivity tools and interactive front-end experiences
-  </p>
+      <p>
+        I enjoy working at the intersection of logic and design — whether it’s
+        understanding how systems work, building full-stack applications,
+        or creating interfaces that feel clean and intuitive.
+      </p>
+
+      <p>
+        I’m especially interested in full-stack development and currently
+        focusing on strengthening my problem-solving skills through advanced
+        data structures and algorithms, while learning by building projects
+        that combine creativity with real-world usability.
+      </p>
+    </div>
+
+    <!-- RIGHT: INFO CARDS -->
+    <div class="about-info">
+
+      <div class="about-card">
+        <h3>Education</h3>
+        <p>
+          <strong>B.Tech – Artificial Intelligence & Data Science</strong><br />
+          Dr. NGP Institute of Technology<br />
+          CGPA: 8.0<br />
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>Skills</h3>
+        <p>
+          <strong>Frontend:</strong> React, Tailwind CSS<br />
+          <strong>Backend:</strong> Node.js, MongoDB<br />
+          <strong>AI & Data:</strong> Python, ML Basics<br />
+          <strong>Tools:</strong> Git, GitHub
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>Interests</h3>
+        <p>
+          Building side projects, experimenting with UI interactions,
+          and continuously learning new technologies.
+        </p>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 
 
   <!-- PROJECTS -->
